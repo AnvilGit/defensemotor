@@ -161,6 +161,62 @@
         <p>Contact us at <a href="mailto:sales@defensemotors.com">sales@defensemotors.com</a></p>
     </footer>
 
+    <!-- javascript -->
+<script>
+    function calculatePrice() {
+    let basePrice = parseInt(document.getElementById('vehicleType').value);
+    let quantity = parseInt(document.getElementById('quantity').value);
+    let features = document.querySelectorAll('input[name="features"]:checked');
+    let totalPrice = basePrice * quantity;
+
+    features.forEach(function(feature) {
+        totalPrice += parseInt(feature.value) * quantity;
+    });
+
+    document.getElementById('totalPrice').innerText = totalPrice.toLocaleString();
+}
+
+function resetPrice() {
+    document.getElementById('vehicleForm').reset();
+    document.getElementById('totalPrice').innerText = '0';
+}
+
+function confirmOrder() {
+    const vehicleTypeElement = document.getElementById('vehicleType');
+    const vehicleType = vehicleTypeElement.options[vehicleTypeElement.selectedIndex].text;
+    const quantity = document.getElementById('quantity').value;
+    
+    if (quantity <= 0) {
+        alert('Please enter a valid quantity.');
+        return;
+    }
+    
+    let additionalFeatures = '';
+    const featureCheckboxes = document.querySelectorAll('input[name="features"]:checked');
+    featureCheckboxes.forEach(checkbox => {
+        additionalFeatures += checkbox.nextSibling.textContent + '\n';
+    });
+    
+    const message = `Do you want to place the order for:\n\nVehicle: ${vehicleType}\nQuantity: ${quantity}\n\nFeatures:\n${additionalFeatures || 'None'}`;
+    
+    if (confirm(message)) {
+        alert('Order placed successfully! \nLook out for the email for confirmation.');
+        // add additional logic here to handle the order placement
+    }
+}
+
+
+
+function enquire(vehicleName) {
+    alert(`Thank you for your interest in the ${vehicleName}. Please contact us at sales@defensemotors.com for more information.`);
+}
+
+// Add an event listener for the Contact link
+document.getElementById('contactLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    alert('Please contact us at sales@defensemotors.com for more information.');
+});
+</script>
 
 </body>
 </html>
