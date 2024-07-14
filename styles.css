@@ -196,6 +196,7 @@ footer {
 footer a[href="mailto:sales@defensemotors.com"] {
     color: #77E4C8;
 }
+
 /* CSS for Mobile Size or Smaller Screen */
 @media (max-width: 1024px) {
     .grid-container {
