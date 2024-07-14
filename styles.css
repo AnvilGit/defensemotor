@@ -193,7 +193,7 @@ footer {
     width: 100%;
     bottom: 0;
 }
-footer a[href="mailto:sales@defensemotors.com"] {
+footer a[href=#"] {
     color: #77E4C8;
 }
 
