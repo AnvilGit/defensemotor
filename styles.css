@@ -166,7 +166,7 @@ nav ul li a:hover {
 
 .button-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 }
 
