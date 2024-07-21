@@ -30,6 +30,12 @@
         </div>
 
         <div class="box product-range-section">
+            <div class="box">
+                <h2>Why Choose Us?</h2>
+                <p>With years of experience and a commitment to excellence, Defense Motors is the trusted partner for military vehicle needs. We ensure reliability, advanced technology, and superior performance in every vehicle we offer.</p>
+                <p>We are the defense industry's largest provider of cutting-edge military vehicles, offering unmatched reliability, advanced technology, and superior performance to meet the diverse needs of modern armed forces.</p>
+                <p>Our extensive range of vehicles ensures that military personnel have the best tools at their disposal for any mission. From armoured personnel carriers to light tactical vehicles, we are committed to delivering excellence and innovation in defense technology.</p>
+            </div>
             <h2>Our Product Range</h2>
             <div class="product-range">
                 <div class="card">
@@ -46,18 +52,12 @@
                 </div>
             </div>
         </div>
-
-        <div class="box">
-            <h2>Why Choose Us?</h2>
-            <p>With years of experience and a commitment to excellence, Defense Motors is the trusted partner for military vehicle needs. We ensure reliability, advanced technology, and superior performance in every vehicle we offer.</p>
-            <p>We are the defense industry's largest provider of cutting-edge military vehicles, offering unmatched reliability, advanced technology, and superior performance to meet the diverse needs of modern armed forces.</p>
-            <p>Our extensive range of vehicles ensures that military personnel have the best tools at their disposal for any mission. From armoured personnel carriers to light tactical vehicles, we are committed to delivering excellence and innovation in defense technology.</p>
-        </div>
     </section>
     <!-- Intro Section Ends -->
 
     <!-- Start of Main Section -->
     <section id="main-content">
+      <h2>Featured deals</h2>
         <div class="grid-container">
             <div class="vehicle">
                 <img src="https://i.postimg.cc/NFsNKPRy/mastiff.jpg" alt="Mastiff">
@@ -158,65 +158,9 @@
     <!-- Order form Section Ends -->
 
     <footer>
-        <p>Contact us at <a href="mailto:sales@defensemotors.com">sales@defensemotors.com</a></p>
+        <p>Contact us at <a href="#">sales@defensemotors.com</a></p>
     </footer>
 
-    <!-- javascript -->
-<script>
-    function calculatePrice() {
-    let basePrice = parseInt(document.getElementById('vehicleType').value);
-    let quantity = parseInt(document.getElementById('quantity').value);
-    let features = document.querySelectorAll('input[name="features"]:checked');
-    let totalPrice = basePrice * quantity;
-
-    features.forEach(function(feature) {
-        totalPrice += parseInt(feature.value) * quantity;
-    });
-
-    document.getElementById('totalPrice').innerText = totalPrice.toLocaleString();
-}
-
-function resetPrice() {
-    document.getElementById('vehicleForm').reset();
-    document.getElementById('totalPrice').innerText = '0';
-}
-
-function confirmOrder() {
-    const vehicleTypeElement = document.getElementById('vehicleType');
-    const vehicleType = vehicleTypeElement.options[vehicleTypeElement.selectedIndex].text;
-    const quantity = document.getElementById('quantity').value;
-    
-    if (quantity <= 0) {
-        alert('Please enter a valid quantity.');
-        return;
-    }
-    
-    let additionalFeatures = '';
-    const featureCheckboxes = document.querySelectorAll('input[name="features"]:checked');
-    featureCheckboxes.forEach(checkbox => {
-        additionalFeatures += checkbox.nextSibling.textContent + '\n';
-    });
-    
-    const message = `Do you want to place the order for:\n\nVehicle: ${vehicleType}\nQuantity: ${quantity}\n\nFeatures:\n${additionalFeatures || 'None'}`;
-    
-    if (confirm(message)) {
-        alert('Order placed successfully! \nLook out for the email for confirmation.');
-        // add additional logic here to handle the order placement
-    }
-}
-
-
-
-function enquire(vehicleName) {
-    alert(`Thank you for your interest in the ${vehicleName}. Please contact us at sales@defensemotors.com for more information.`);
-}
-
-// Add an event listener for the Contact link
-document.getElementById('contactLink').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    alert('Please contact us at sales@defensemotors.com for more information.');
-});
-</script>
 
 </body>
 </html>
