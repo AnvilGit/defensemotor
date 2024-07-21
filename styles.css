@@ -1,21 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    background: url('https://i.postimg.cc/13Q06r5s/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-/*     background-color: #f4f4f4; */
-    padding-bottom: 100px; 
+    box-sizing: border-box;
 }
 
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: url('https://i.postimg.cc/13Q06r5s/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header */
 header {
-    background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background */ ;
-    color: white;
+    background: #333;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    
 }
 
 header h1 {
@@ -26,9 +33,26 @@ header h1 {
 
 .header-logo img {
     height: 80px; /* Adjust the size as needed */
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.box h2 {
+  background: #FFFED3;
+  display: inline;
+  padding: 5px;
+}
+#main-content > h2 {
+  background: #FFFED3;
+  display: inline;
+  padding: 5px;
 }
 
-/*------------ Nav Bar ------------ */
+#order-form > h2 {
+  background: #FFFED3;
+  display: inline;
+  padding: 5px;
+}
+/*-----------Nav Bar ----------*/
 nav ul {
     list-style: none;
     margin: 0;
@@ -52,84 +76,57 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-#intro {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
-    color: #333;
-    text-align: center;
+/* Sections */
+section {
     padding: 20px;
-    border-bottom: 1px solid #ddd;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#intro p {
-    font-size: 1.2em;
-    margin: 0;
-    line-height: 1.6;
+/* Intro Section */
+#intro .box {
+    margin-bottom: 20px;
 }
 
-.box {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
+/* Product Range */
 .product-range {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around;
-    flex-wrap: wrap;
-  gap: 10px;
-}
-
-.product-range-section {
-  background: url('https://i.postimg.cc/RC6pwHRy/bg-image.png') no-repeat center center fixed;
-    background-size: cover;
-}
-
-#main-content {
-    position: relative; /* Ensure relative positioning for absolute positioning within it */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    margin-bottom: 100px; /* Adjusted margin bottom to accommodate footer */
 }
 
 .card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Vehicle Grid */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    width: 100%;
-}
-
-.card h3 {
-    margin-top: 0;
+    gap: 20px;
 }
 
 .vehicle {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .vehicle img {
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 .vehicle h2 {
@@ -137,82 +134,109 @@ nav ul li a:hover {
 }
 
 .vehicle p {
-    color: #555;
+    margin: 5px 0;
 }
 
+.vehicle button {
+    background:#007BFF ;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vehicle button:hover {
+    background: #0056b3;
+}
+
+/* Order Form */
 #order-form {
-    margin: 10px auto;
-    padding: 70px;
-    width: 50%;
-    max-width: 800px; /* Ensure it doesn't get too wide on large screens */
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    width: 90%;
+    max-width: 1250px;
 }
 
-#order-form h2 {
-    text-align: center;
-}
-
-#order-form form {
+#vehicleForm {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
-#order-form label {
-    margin: 10px 0;
+#vehicleForm label {
+    margin: 10px 0 5px;
+}
+
+#vehicleForm select,
+#vehicleForm input[type="number"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#vehicleForm input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 .button-container {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-button {
-    background-color: #007BFF;
-    color: white;
+.button-container button {
+    background: #007BFF;
+    color: #fff;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
     border-radius: 5px;
-    margin-top: 10px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.button-container button:hover {
+    background: #0056b3;
 }
 
+#totalPrice {
+    font-weight: bold;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 0px 0; /* Adjusted padding to make footer larger */
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
+    background: #333;
+    color: #fff;
 }
-footer a[href=#"] {
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer a[href="#"] {
     color: #77E4C8;
 }
 
-/* CSS for Mobile Size or Smaller Screen */
+/* Media Queries */
 @media (max-width: 1024px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for tablets */
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    #order-form {
-        width: 100%; /* Full width */
-        position: relative; /* Relative position */
-        margin: 20px auto 0; /* Centered with margin */
+    .header-logo img {
+        height: 70px;
     }
 }
 
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* 1 column layout for mobile */
+        grid-template-columns: 1fr;
     }
 
     header {
@@ -220,35 +244,25 @@ footer a[href=#"] {
         text-align: center;
     }
 
+    .header-logo img {
+        height: 60px;
+    }
+
     header h1 {
         margin: 10px 0;
     }
-
-    .header-logo img {
-        height: 60px; /* Smaller logo size for mobile */
-    }
-
-    #intro p {
-        font-size: 1em; /* Smaller font size for mobile */
-    }
-
-    .card {
-        width: 45%;
-    }
-
-    #order-form {
-        width: 100%; /* Full width */
-        position: relative; /* Relative position */
-        margin: 20px auto 0; /* Centered with margin */
-    }
-
-    .button-container {
+  nav ul {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .product-range {
         flex-direction: column;
-        align-items: center;
+    }
+  .button-container {
+        flex-direction: column;
     }
 
-    button {
-        width: 100%; /* Full width buttons */
-        margin: 5px 0; /* Space between buttons */
+    .button-container button {
+        margin: 10px 0;
     }
 }
