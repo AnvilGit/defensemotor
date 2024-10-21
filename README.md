@@ -38,7 +38,7 @@ A fictional website offering a wide range of military vehicles for sale. The sit
 ## Installation
 1. Clone the repository:
    
-git clone https://github.com/yourusername/defensemotor.git
+git clone https://github.com/AnvilGit/defensemotor.git
 
 2. Navigate to the project directory:
 
