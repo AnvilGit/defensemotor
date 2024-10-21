@@ -54,13 +54,13 @@ cd defensemotor
 - Contact: Use the "Contact" section to send inquiries via email.
 
 ## Technologies Used
-HTML5: For structuring the website.
-CSS3: For styling the website (linked via styles.css).
-JavaScript: For dynamic price calculation, form handling, and user interaction
+- HTML5: For structuring the website.
+- CSS3: For styling the website (linked via styles.css).
+- JavaScript: For dynamic price calculation, form handling, and user interaction
 
 ## Live Application URL
 
-The Application is deployed in https://anvilgit.github.io/defensemotor/
-Click on the link to see the application
+- The Application is deployed in https://anvilgit.github.io/defensemotor/
+- Click on the link to see the application
 
 
