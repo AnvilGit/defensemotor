@@ -46,7 +46,6 @@ cd defensemotor
 
 3. Open the index.html file in your browser to view the site.
 
-Make sure you have the following installed:
 
 ## Usage
 - Navigation: Use the top navigation bar to jump to different sections like "About Us," "Vehicles," "Order," and "Contact."
