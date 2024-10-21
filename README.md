@@ -4,12 +4,11 @@ A fictional website offering a wide range of military vehicles for sale. The sit
 
 ## Features
 
-- Responsive Layout:
--  The site is built with a mobile-friendly design.
-- Vehicles Showcase: Lists various military vehicles like Armoured Personnel Carriers, Light Tactical Vehicles, and more, with images and descriptions.
-- Order Form: Users can select vehicles, add features, and calculate the total price before placing an order.
-- Enquiry Option: Users can send inquiries about specific vehicles with a simple button click.
-- Interactive Features: JavaScript is used to handle price calculations and confirmation of orders.
+- Responsive Layout:  The site is built with a mobile-friendly design.
+- Vehicles Showcase:  Lists various military vehicles like Armoured Personnel Carriers, Light Tactical Vehicles, and more, with images and descriptions.
+- Order Form:  Users can select vehicles, add features, and calculate the total price before placing an order.
+- Enquiry Option:  Users can send inquiries about specific vehicles with a simple button click.
+- Interactive Features:  JavaScript is used to handle price calculations and confirmation of orders.
 
 ## Sections
 1. Header:
